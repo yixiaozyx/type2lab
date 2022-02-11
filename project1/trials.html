@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <title> A visual depiction of a love letter MaryV wrote</title> 
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+      h1{
+      font-family: 'Courier New', Courier, monospace;
+      color: hotpink;
+      font-size: 25px;
+      background-color: rbg(5,5,5);
+      text-align: left;
+      margin-top: 30px;
+      margin-bottom: 100px;
+      margin-right: 150px;
+     margin-left:5px;
+     position:relative;
+       }
+     
+      head{
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-right: 150px;
+        margin-left: 150px;
+       }
+	   #s{
+      font-family: 'Courier New', Courier, monospace;
+      color: hotpink;
+      font-size: 20px;
+		font-weight: 800;
+	   }
+	   span{
+		   
+		    display: none;
+    white-space: nowrap; /* 文字不换行 */
+    overflow: hidden; /* 多余的文字内容隐藏 */
+			animation: borders 0.7s infinite normal,
+				widths 1.2s steps(20);
+	   }
+      @keyframes broders {
+          from {border-right-color: #000;}
+          to {border-right-color: #fff;}
+      }
+      /* 容器宽的改变动画 */
+      @keyframes widths {
+          from {width: 0;}
+          to {width: 100%;} /* 也可以是固定宽 */
+      }
+  </style>
+
+
+
+<body style="height: 600px;" onclick="onclick_f()">
+
+  
+      <head>
+       
+      </head>
+   
+
+	<div id="mainShow">
+		
+    <image src="chella and maryv.png" id="maryv"  alt="MaryV and Chella Man"> </image>
+
+
+    <p id="s" style="margin-top: 420px;">
+
+<span>
+	<br>
+	<br>
+let me tell you about the person I'm in love with you were born in <a id="hershey" style="color: #000000;" href="https://www.google.com/maps/placelists/list/2vIsguKwQiOlWz9qWfF3WQ"target="_blank"> Hershey Pennsylvania</a>, the sweetest place on earth.<br>
+</span>
+<span>
+some might disagree. <br>
+</span>
+<span>
+you were swallowed whole by blue heaviness.<br>
+</span>
+<span>
+the first time I laid eyes on you I was stunned,<br>
+</span>
+<span>
+and I bet the last time I lay eyes on you, I'll be stunned.<br>
+</span>
+<span>
+but I try not to think about that.<br>
+</span>
+<span>
+you've spent so long trying to understand yourself.<br>
+</span>
+<span>
+that's why you've taken so much time to understand me.<br>
+</span>
+<span>
+truly, deeply to the core.<br>
+</span>
+<span>
+<a id="thank" style="color: #000000;" href="https://tinyurl.com/3bktnzx7" target="_blank">thank you</a> for doing that.<br>
+</span>
+<span>
+you're as soft as a newborn puppy,<br>
+</span>
+<span>
+but as tough as a tiger or a slab of metal<br>
+</span>
+<span>
+gold to be exact.<br>
+</span>
+<span>
+you could have been made in a factory not a scary one,<br>
+</span>
+<span>
+one next to the Sun.<br>
+</span>
+<span>
+I can't whisper to you, but you will <a id="read" style="color: #000000;" href="https://www.instagram.com/p/BoLHBOoA_pz/?utm_medium=copy_link" target="_blank">read</a><br>
+</span>
+<span>
+my lips from curve to curve.<br>
+</span>
+<span>
+I'll lean in to kiss your lips.<br>
+</span>
+<span>
+I can taste your courage.<br>
+
+</span>
+<span>
+when you're still you're sleeping,
+</span>
+<span>
+that's the only time you're still.<br>
+</span>
+<span>
+
+for about two years I've known this being on earth,<br>
+</span>
+<span>
+two years of knowing you exist in this world.<br>
+</span>
+<span>
+have you ever told someone you love them without words <br>
+</span>
+<span>
+without pen or paper<br>
+</span>
+<span>
+without technology<br>
+</span>
+<span>
+
+
+do you believe in <a id="angels" style="color: #000000;" href="https://youtu.be/5mNI7f5PIHk" target="_blank">angels</a> ?
+</span>
+
+	</p>
+	</div>
+  </body>  
+  
+  <script>
+	  let index = 0;
+	function onclick_f(){
+		if(index!= 0){
+			
+		document.getElementsByTagName("span")[index-1].style.display = "none" 
+		}
+		
+		document.getElementsByTagName("span")[index].style.display = "block" 
+		index ++;
+	}
+	document.getElementById("hershey").onclick =  function(){
+		document.getElementById("iframe2").style.display = "none" 
+		document.getElementById("iframe3").style.display = "none" 
+		document.getElementById("iframe4").style.display = "none" 
+		document.getElementById("iframe1").style.display = "" 
+		document.getElementById("mainShow").style.width = "50%"
+		document.getElementById("maryv").style.left = "20vh"
+		return false;
+	}
+	document.getElementById("thank").onclick =  function(){
+		document.getElementById("iframe1").style.display = "none" 
+		document.getElementById("iframe3").style.display = "none" 
+		document.getElementById("iframe4").style.display = "none" 
+		document.getElementById("iframe2").style.display = "" 
+		document.getElementById("mainShow").style.width = "50%"
+		document.getElementById("maryv").style.left = "20vh"
+		return false;
+	}
+	document.getElementById("read").onclick =  function(){
+		document.getElementById("iframe1").style.display = "none" 
+		document.getElementById("iframe2").style.display = "none" 
+		document.getElementById("iframe4").style.display = "none" 
+		document.getElementById("iframe3").style.display = "" 
+		document.getElementById("mainShow").style.width = "50%"
+		document.getElementById("maryv").style.left = "20vh"
+		return false;
+	}
+	document.getElementById("angels").onclick =  function(){
+		document.getElementById("iframe1").style.display = "none" 
+		document.getElementById("iframe2").style.display = "none" 
+		document.getElementById("iframe3").style.display = "none" 
+		document.getElementById("iframe4").style.display = "" 
+		document.getElementById("mainShow").style.width = "50%"
+		document.getElementById("maryv").style.left = "20vh"
+		return false;
+	}
+  </script>
+</html>
+
+
+
+
+
