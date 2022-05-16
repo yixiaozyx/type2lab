@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>GeOmeRtrY gArDEn</title>
+    <link rel="stylesheet" href="codefinal.css">
+    <script text="text/jacascript" src="/Users/yixiaozhao/Dropbox/Mac/Desktop/Parsons/interactionstudio/final/codefinal.js"></script>
+</head>
+
+<body>
+    <script src="codefinal.js"></script>
+
+    <div class="leftbar">
+
+    <script type="text/processing">
+        PVector location;
+PVector velocity;
+void setup(){
+  size(1000,400);
+  location = new PVector(5,5);
+  velocity = new PVector(0.6, 30.0);
+}
+
+void draw(){
+  noStroke();
+  fill(255,1);
+  rect(0,0,width,height);
+  location.add (velocity);
+
+if((location.x>width) || (location.x <0)){
+  velocity.x = velocity.y*-1;
+}
+if((location.y>height) || (location.y <0)){
+  velocity.y = velocity.y*-1;
+}
+stroke(0);
+strokeWeight(1);
+fill(255);
+ellipse(location.x, location.y,60,20);
+rect(location.y, location.x,5,5);
+}
+    </script>
+    <canvas id="sketch" style=" border: 1.5px solid black;"></canvas>
+
+    <script type="text/processing">
+        int angle = 0;
+
+void setup() {
+  size(40, 400);
+  background(15);
+  noStroke();
+  fill(0, 102);
+}
+
+void draw() {
+  // Draw only when mouse is pressed
+  if (mousePressed == true) {
+    angle += 10;
+    float val = cos(radians(angle)) * 12.0;
+    for (int a = 50; a < 600; a += 305) {
+      float xoff = cos(radians(a)) * val;
+      float yoff = sin(radians(a)) * val;
+      fill(255);
+      ellipse(mouseX + xoff, mouseY + yoff, val, val);
+    }
+    fill(255);
+    ellipse(mouseX, mouseY, 5, 5);
+  }
+}
+    </script>
+    <canvas id="sketch" style=" border: 1.5px solid black;"></canvas>
+
+    <script type="text/processing">
+        float x;
+        float y;
+        float easing = 0.02;
+        
+        void setup() {
+          size(100, 400); 
+          noStroke();  
+        }
+        
+        void draw() { 
+          background(100);
+          
+          float targetX = mouseX;
+          float dx = targetX - x;
+          x += dx * easing;
+          
+          float targetY = mouseY;
+          float dy = targetY - y;
+          y += dy * easing;
+          
+          ellipse(x, y, 40, 36);
+        }
+    </script>
+    <canvas id="sketch" style=" border: 1.5px solid black;"></canvas>
+
+<script type="text/processing">
+    PVector location;
+    PVector velocity;
+    void setup(){
+      size(260,400);
+      location = new PVector(10,10);
+      velocity = new PVector(0.6, 30.0);
+    }
+    
+    void draw(){
+      noStroke();
+      fill(255,1);
+      rect(0,0,width,height);
+      location.add (velocity);
+    
+    if((location.x>width) || (location.x <0)){
+      velocity.x = velocity.y*-1;
+    }
+    if((location.y>height) || (location.y <0)){
+      velocity.y = velocity.y*-1;
+    }
+    stroke(0);
+    strokeWeight(1);
+    fill(255);
+    rect(location.x, location.y,20,30);
+    rect(location.y, location.x,10,5);
+    }
+</script>
+<canvas id="sketch" style=" border: 1.5px solid black;"></canvas>
+
+
+<script type="text/processing">
+    void setup() {
+        size(640, 360);
+        background(102);
+      }
+      
+      void draw() {
+        // Call the variableEllipse() method and send it the
+        // parameters for the current mouse position
+        // and the previous mouse position
+        variableEllipse(mouseX, mouseY, pmouseX, pmouseY);
+      }
+      
+      
+      // The simple method variableEllipse() was created specifically 
+      // for this program. It calculates the speed of the mouse
+      // and draws a small ellipse if the mouse is moving slowly
+      // and draws a large ellipse if the mouse is moving quickly 
+      
+      void variableEllipse(int x, int y, int px, int py) {
+        float speed = abs(x-px) + abs(y-py);
+        stroke(speed);
+        ellipse(x, y, speed, speed);
+      }
+    </script>
+    <canvas id="sketch" style=" border: 1.5px solid black;"></canvas>
+
+    <script type="text/processing">
+        PVector location;
+PVector velocity;
+void setup(){
+  size(126,360);
+  location = new PVector(10,10);
+  velocity = new PVector(0.6, 30.0);
+}
+
+void draw(){
+  noStroke();
+  fill(255,1);
+  rect(0,0,width,height);
+  location.add (velocity);
+
+if((location.x>width) || (location.x <0)){
+  velocity.x = velocity.y*-1;
+}
+if((location.y>height) || (location.y <0)){
+  velocity.y = velocity.y*-1;
+}
+stroke(0);
+strokeWeight(1);
+fill(255);
+ellipse(location.x, location.y,8,8);
+rect(location.y, location.x,8,8);
+}
+    </script>
+    <canvas id="sketch" style=" border: 1.5px solid black;"></canvas>
+
+    <script type="text/processing">
+        void setup() {
+            size(640, 360);
+            background(102);
+          }
+          
+          void draw() {
+            // Call the variableEllipse() method and send it the
+            // parameters for the current mouse position
+            // and the previous mouse position
+            variableEllipse(mouseX, mouseY, pmouseX, pmouseY);
+            fill(170);
+          }
+          
+          
+          // The simple method variableEllipse() was created specifically 
+          // for this program. It calculates the speed of the mouse
+          // and draws a small ellipse if the mouse is moving slowly
+          // and draws a large ellipse if the mouse is moving quickly 
+          
+          void variableEllipse(int y, int x, int px, int py) {
+            float speed = abs(x-px) + abs(y-py);
+            stroke(speed);
+            ellipse(x, y, speed, speed);
+          }
+    </script>
+    <canvas id="sketch" style=" border: 1.5px solid black;"></canvas>
+
+</div>
+
+<div id="bg">
+<a href="IMG_6530.JPG"><img id=bg src=""></a>
+</div>
+
+</body>
+</html>
